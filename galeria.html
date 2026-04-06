@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Memorias - ECOS DE PALENQUE</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="javascript.js" defer></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="gallery-page">
+    <!-- PANEL LATERAL (VENTANA AZUL) -->
+    <div class="panel" id="panel">
+        <nav>
+            <ul>
+                <li><a href="2.html">INICIO</a></li>
+                <li><a href="explora.html">EXPLORAR</a></li>
+                <li><a href="cartografia.html">CARTOGRAFIA</a></li>
+                <li><a href="actividades.html">ACTIVIDADES</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <header class="header-principal subpage-header">
+        <div class="header-brand">
+            <a href="2.html" class="ecos-palenque">ECOS DE PALENQUE</a>
+        </div>
+        <div class="header-right-side">
+            <nav class="nav-desktop">
+                <ul>
+                    <li><a href="2.html">INICIO</a></li>
+                    <li><a href="historia.html">HISTORIA</a></li>
+                    <li><a href="gastronomia.html">GASTRONOMÍA</a></li>
+                    <li><a href="musica.html">MÚSICA</a></li>
+                    <li><a href="editorial.html">EDITORIAL</a></li>
+                    <li><a href="galeria.html">GALERIA</a></li>
+                </ul>
+            </nav>
+            <!-- BOTÓN HAMBURGUESA INTEGRADO -->
+            <div id="btnMenu" class="hamburguesa-header">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="radiant-wrapper">
+        <!-- SECCIÓN IZQUIERDA: La Rueda (HUD STYLE ANIMATED) -->
+        <section class="wheel-section">
+            <div class="radiant-hub">
+                <!-- SVG Técnico HUD Animado -->
+                <svg viewBox="0 0 500 500" class="wheel-hud-svg">
+                    <!-- Capa Rotación Lenta (CW) -->
+                    <g class="hud-rotate-slow">
+                        <circle cx="250" cy="250" r="240" class="hud-arc" stroke-width="1" />
+                        <circle cx="250" cy="250" r="210" class="hud-arc" stroke-width="8" stroke-dasharray="100, 400" />
+                        <!-- Ticks -->
+                        <g transform="translate(250, 250)">
+                            <line x1="215" y1="0" x2="225" y2="0" class="hud-tick" transform="rotate(0)" />
+                            <line x1="215" y1="0" x2="225" y2="0" class="hud-tick" transform="rotate(45)" />
+                            <line x1="215" y1="0" x2="225" y2="0" class="hud-tick" transform="rotate(90)" />
+                            <line x1="215" y1="0" x2="225" y2="0" class="hud-tick" transform="rotate(135)" />
+                            <line x1="215" y1="0" x2="225" y2="0" class="hud-tick" transform="rotate(180)" />
+                            <line x1="215" y1="0" x2="225" y2="0" class="hud-tick" transform="rotate(225)" />
+                            <line x1="215" y1="0" x2="225" y2="0" class="hud-tick" transform="rotate(270)" />
+                            <line x1="215" y1="0" x2="225" y2="0" class="hud-tick" transform="rotate(315)" />
+                        </g>
+                    </g>
+                    
+                    <!-- Capa Rotación Rápida (CCW) -->
+                    <g class="hud-rotate-fast">
+                        <circle cx="250" cy="250" r="230" class="hud-arc hud-arc-dashed" stroke-width="1" />
+                        <circle cx="250" cy="250" r="190" class="hud-arc" stroke-width="2" stroke-dasharray="200, 100" />
+                    </g>
+
+                    <!-- Capa Núcleo Central (Pulsating) -->
+                    <g class="hud-pulse">
+                        <circle cx="250" cy="250" r="130" class="hud-arc hud-arc-thick" />
+                        <circle cx="250" cy="250" r="110" class="hud-arc" stroke-width="2" stroke-dasharray="20, 20" />
+                        <!-- Círculo azul oscuro en el centro (NUEVO ORDEN: Azul -> Naranja -> Rojo) -->
+                        <circle cx="250" cy="250" r="45" fill="#001219" opacity="1" />
+                    </g>
+
+                    <!-- Datos Numéricos Estáticos -->
+                    <text x="250" y="40" class="hud-data-text" text-anchor="middle">SYSTEM.READY</text>
+                    <text x="460" y="250" class="hud-data-text">8.324</text>
+                    <text x="40" y="250" class="hud-data-text" text-anchor="end">8.252</text>
+                </svg>
+            </div>
+            <!-- Contenedor de la Rueda (22 Imágenes de la carpeta rueda) -->
+            <div id="radiantWheel">
+                <div class="radiant-item animate-on-scroll"><img src="rueda/1.jpg" alt="Rueda 1"></div>
+                <div class="radiant-item animate-on-scroll"><img src="rueda/2.jpg" alt="Rueda 2"></div>
+                <div class="radiant-item animate-on-scroll"><img src="rueda/3.jpg" alt="Rueda 3"></div>
+                <div class="radiant-item animate-on-scroll"><img src="rueda/4.jpg" alt="Rueda 4"></div>
+                <div class="radiant-item animate-on-scroll"><img src="rueda/5.jpg" alt="Rueda 5"></div>
+                <div class="radiant-item animate-on-scroll"><img src="rueda/6.jpg" alt="Rueda 6"></div>
+                <div class="radiant-item animate-on-scroll"><img src="rueda/7.jpg" alt="Rueda 7"></div>
+                <div class="radiant-item animate-on-scroll"><img src="rueda/8.jpg" alt="Rueda 8"></div>
+                <div class="radiant-item animate-on-scroll"><img src="rueda/9.jpg" alt="Rueda 9"></div>
+                <div class="radiant-item animate-on-scroll"><img src="rueda/10.jpg" alt="Rueda 10"></div>
+                <div class="radiant-item animate-on-scroll"><img src="rueda/11.jpg" alt="Rueda 11"></div>
+                <div class="radiant-item animate-on-scroll"><img src="rueda/12.jpg" alt="Rueda 12"></div>
+                <div class="radiant-item animate-on-scroll"><img src="rueda/13.jpg" alt="Rueda 13"></div>
+                <div class="radiant-item animate-on-scroll"><img src="rueda/14.jpg" alt="Rueda 14"></div>
+                <div class="radiant-item animate-on-scroll"><img src="rueda/15.jpg" alt="Rueda 15"></div>
+                <div class="radiant-item animate-on-scroll"><img src="rueda/16.jpg" alt="Rueda 16"></div>
+                <div class="radiant-item animate-on-scroll"><img src="rueda/17.jpg" alt="Rueda 17"></div>
+                <div class="radiant-item animate-on-scroll"><img src="rueda/18.jpg" alt="Rueda 18"></div>
+                <div class="radiant-item animate-on-scroll"><img src="rueda/19.jpg" alt="Rueda 19"></div>
+                <div class="radiant-item animate-on-scroll"><img src="rueda/20.jpg" alt="Rueda 20"></div>
+                <div class="radiant-item animate-on-scroll"><img src="rueda/21.jpg" alt="Rueda 21"></div>
+                <div class="radiant-item animate-on-scroll"><img src="rueda/22.jpg" alt="Rueda 22"></div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DERECHA: Panel de Visualización Lateral -->
+        <section class="preview-section" id="photoPreview">
+            <!-- Título integrado -->
+            <div class="radiant-title-container">
+                <h1 class="radiant-title">GALERÍA <span>de memorias</span></h1>
+            </div>
+
+            <!-- Placeholder inicial -->
+            <div class="preview-placeholder">Selecciona un fragmento de memoria</div>
+            <img id="photoPreviewImg" src="" alt="Mural Completo" class="premium-img-effect">
+            
+            <!-- Botón Volver al Inicio (Dentro del contenedor de imagen grande) -->
+            <a href="2.html" class="back-link">← VOLVER AL INICIO</a>
+        </section>
+    </main>
+
+    <!-- Script de Rotación e Interacción Lateral -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const wheel = document.getElementById('radiantWheel');
+            const previewImg = document.getElementById('photoPreviewImg');
+            const placeholder = document.querySelector('.preview-placeholder');
+            const radiantItems = document.querySelectorAll('.radiant-item');
+
+            let rotation = 0;
+            let targetRotation = 0;
+            let currentRotation = 0;
+            let targetX = 0; // Para el movimiento lateral solicitado
+            let currentX = 0;
+
+            // 1. Animación de Rotación y Movimiento Horizontal Dinámico
+            function animate() {
+                rotation += 0.04; // Rotación lenta constante
+                currentRotation += (rotation + targetRotation - currentRotation) * 0.1;
+                currentX += (targetX - currentX) * 0.05; // Suavizado del movimiento X
+
+                // Aplicamos tanto la rotación como el desplazamiento lateral
+                wheel.style.transform = `translate(${currentX}px, -50%) rotate(${currentRotation}deg)`;
+                requestAnimationFrame(animate);
+            }
+            animate();
+
+            // Interacción con el mouse para rotación y movimiento lateral
+            window.addEventListener('mousemove', (e) => {
+                const x = e.clientX / window.innerWidth;
+                targetRotation = (x - 0.5) * 12; // Rotación según el mouse
+                targetX = (x - 0.5) * 40;        // Desplazamiento Izquierda-Derecha (40px rango)
+            });
+
+            // 2. Lógica de "Apertura" en el Panel Derecho (Visualizar imagen completa)
+            radiantItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const img = item.querySelector('img');
+                    
+                    // Efecto de fundido al cambiar la imagen
+                    previewImg.classList.remove('active');
+                    
+                    // Detectar si la foto es vertical
+                    const isVertical = item.classList.contains('vertical-photo');
+                    
+                    setTimeout(() => {
+                        previewImg.src = img.src;
+                        
+                        // Aplicar clase vertical si corresponde
+                        if (isVertical) {
+                            previewImg.classList.add('is-vertical');
+                        } else {
+                            previewImg.classList.remove('is-vertical');
+                        }
+                        
+                        previewImg.classList.add('active');
+                        placeholder.style.display = 'none';
+                    }, 100);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
