@@ -44,7 +44,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 60px; /* Cabecera delgada */
+    height: 85px; /* Cabecera delgada */
     background: #051016; /* Color de la palet: Negro/Azul profundo */
     display: flex;
     justify-content: space-between;
@@ -6244,6 +6244,350 @@ body.gallery-page {
         opacity: 1 !important;
         transform: none !important;
     }
+
+    /* ---- HISTORIA PAGE ---- */
+    .history-triptych-layout,
+    .history-premium-layout {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+        margin: 2rem 0 !important;
+    }
+
+    .triptych-side {
+        min-height: auto !important;
+    }
+
+    .triptych-side img {
+        height: auto !important;
+        max-height: 300px !important;
+        width: 100% !important;
+        object-fit: contain !important;
+    }
+
+    /* ---- GASTRONOMIA PAGE ---- */
+    .featured-dish-container {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+
+    .featured-image-box {
+        height: auto !important;
+        min-height: 250px !important;
+    }
+
+    .category-row {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+        margin-top: 2rem !important;
+    }
+
+    .modal-content {
+        left: 5vw !important;
+        right: 5vw !important;
+        top: 5vh !important;
+        bottom: 5vh !important;
+        padding: 3rem 1.5rem !important;
+    }
+
+    .ingredients-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+
+    .dishes-bento-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .ing-img-box {
+        height: 150px !important;
+    }
+
+    /* ---- MUSICA PAGE ---- */
+    .oraz-songs-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+
+    .oraz-split-section {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+
+    .oraz-footer-top {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+
+    .oraz-hero-content {
+        padding-left: 5% !important;
+        padding-right: 5% !important;
+    }
+
+    #main-hero-title {
+        font-size: 4.5rem !important;
+        letter-spacing: 5px !important;
+    }
+
+    .oraz-hero-content span {
+        font-size: 1.8rem !important;
+    }
+
+    /* ---- EDITORIAL PAGE ---- */
+    .bento-publications {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto !important;
+        min-height: auto !important;
+    }
+
+    .pub-card-large {
+        grid-column: 1 !important;
+        grid-row: auto !important;
+        flex-direction: column !important;
+    }
+
+    .pub-large-img {
+        padding: 1rem !important;
+        max-height: 250px !important;
+    }
+
+    .pub-large-content {
+        padding: 1.5rem !important;
+    }
+
+    .editorial-order-card {
+        flex-direction: column !important;
+        min-height: auto !important;
+    }
+
+    .editorial-order-img {
+        flex: auto !important;
+        padding: 1.5rem !important;
+    }
+
+    .editorial-order-form {
+        padding: 1.5rem !important;
+    }
+
+    .form-row {
+        flex-direction: column !important;
+        gap: 1rem !important;
+    }
+
+    .editorial-header-redesign h1 {
+        font-size: 2.5rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .mural-card-flat {
+        aspect-ratio: 4 / 5 !important;
+        height: 55vh !important;
+        width: 100% !important;
+    }
+
+    .editorial-order-form,
+    .editorial-order-form form,
+    .editorial-order-form form .form-group,
+    .editorial-order-form form input,
+    .editorial-order-form form select,
+    .editorial-order-form form button {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+}
+
+/* 3. GALLERY PAGE (galeria.html) - RADIANT WHEEL FIX */
+@media (max-width: 1024px) {
+    .radiant-wrapper { flex-direction: column !important; height: auto !important; overflow-y: auto !important; }
+    .wheel-section { width: 100% !important; height: 60vh !important; min-height: 400px !important; perspective: 1000px; display: flex !important; align-items: center !important; justify-content: center !important; overflow: visible !important; }
+    
+    .radiant-hub {
+        position: absolute !important;
+        left: 50% !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        width: 300px !important;
+        height: 300px !important;
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    #radiantWheel {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: absolute !important;
+        left: 0 !important;
+        top: 0 !important;
+        width: 0 !important;
+        height: 0 !important;
+        scale: 0.55 !important;
+        z-index: 100 !important;
+    }
+    
+    .radiant-item {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none;
+        width: 260px !important;
+        height: 70px !important;
+        left: 200px !important;
+        transform-origin: -200px center !important;
+    }
+
+    .wheel-hud-svg { scale: 0.8 !important; opacity: 1 !important; visibility: visible !important; }
+
+    .preview-section { width: 100% !important; height: auto !important; padding: 40px 20px !important; border-top: 2px solid #e59f20; align-items: center !important; }
+/* ---- HISTORIA PAGE ---- */
+    .history-triptych-layout,
+    .history-premium-layout {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+        margin: 2rem 0 !important;
+    }
+
+    .triptych-side {
+        min-height: auto !important;
+    }
+
+    .triptych-side img {
+        height: auto !important;
+        max-height: 300px !important;
+        width: 100% !important;
+        object-fit: contain !important;
+    }
+
+    /* ---- GASTRONOMIA PAGE ---- */
+    .featured-dish-container {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+
+    .featured-image-box {
+        height: auto !important;
+        min-height: 250px !important;
+    }
+
+    .category-row {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+        margin-top: 2rem !important;
+    }
+
+    .modal-content {
+        left: 5vw !important;
+        right: 5vw !important;
+        top: 5vh !important;
+        bottom: 5vh !important;
+        padding: 3rem 1.5rem !important;
+    }
+
+    .ingredients-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+
+    .dishes-bento-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .ing-img-box {
+        height: 150px !important;
+    }
+
+    /* ---- MUSICA PAGE ---- */
+    .oraz-songs-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+
+    .oraz-split-section {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+
+    .oraz-footer-top {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+
+    .oraz-hero-content {
+        padding-left: 5% !important;
+        padding-right: 5% !important;
+    }
+
+    #main-hero-title {
+        font-size: 4.5rem !important;
+        letter-spacing: 5px !important;
+    }
+
+    .oraz-hero-content span {
+        font-size: 1.8rem !important;
+    }
+
+    /* ---- EDITORIAL PAGE ---- */
+    .bento-publications {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto !important;
+        min-height: auto !important;
+    }
+
+    .pub-card-large {
+        grid-column: 1 !important;
+        grid-row: auto !important;
+        flex-direction: column !important;
+    }
+
+    .pub-large-img {
+        padding: 1rem !important;
+        max-height: 250px !important;
+    }
+
+    .pub-large-content {
+        padding: 1.5rem !important;
+    }
+
+    .editorial-order-card {
+        flex-direction: column !important;
+        min-height: auto !important;
+    }
+
+    .editorial-order-img {
+        flex: auto !important;
+        padding: 1.5rem !important;
+    }
+
+    .editorial-order-form {
+        padding: 1.5rem !important;
+    }
+
+    .form-row {
+        flex-direction: column !important;
+        gap: 1rem !important;
+    }
+
+    .editorial-header-redesign h1 {
+        font-size: 2.5rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .mural-card-flat {
+        aspect-ratio: 4 / 5 !important;
+        height: 55vh !important;
+        width: 100% !important;
+    }
+
+    .editorial-order-form,
+    .editorial-order-form form,
+    .editorial-order-form form .form-group,
+    .editorial-order-form form input,
+    .editorial-order-form form select,
+    .editorial-order-form form button {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
 }
 
 /* 3. GALLERY PAGE (galeria.html) - RADIANT WHEEL FIX */
@@ -6309,4 +6653,320 @@ body.gallery-page {
     
     footer p { font-size: 12px; }
     .category-row { grid-template-columns: 1fr !important; gap: 15px !important; }
+}
+
+/* =============================================
+   NUEVA GALERÍA MASONRY E INTERCALADA
+   ============================================= */
+
+/* Fondo oscuro global solo para la galería */
+.gallery-page {
+    background: #051016;
+}
+
+.gallery-masonry-wrapper {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 85px; /* Header respect */
+    overflow: hidden;
+    background: #051016; /* Fondo azul oscuro */
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-header-title {
+    text-align: center;
+    padding: 20px 0;
+    z-index: 100;
+    position: relative;
+    background: linear-gradient(to bottom, rgba(5,16,22,1) 50%, rgba(5,16,22,0));
+}
+
+.gallery-header-title .radiant-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 35pt;
+    color: #fcd5a3;
+    letter-spacing: 5px;
+    margin: 0;
+    text-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.gallery-header-title span {
+    font-family: 'belle', cursive;
+    font-size: 25pt;
+    color: #e59f20;
+    display: block;
+    margin-top: -15px;
+}
+
+/* Contenedor Masonry (Rotado y expandido para llenar el contenedor en diagonal) */
+.masonry-container {
+    display: flex;
+    gap: 20px;
+    padding: 0 20px;
+    height: 200vh;
+    width: 150vw;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-15deg);
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+/* Configuración de Columnas */
+.masonry-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+    max-width: 280px; /* Ajuste para que quepan más en diagonal */
+}
+
+/* Animaciones de Desplazamiento Vertical */
+@keyframes scrollUp {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50%); } 
+}
+
+@keyframes scrollDown {
+    0% { transform: translateY(-50%); }
+    100% { transform: translateY(0); }
+}
+
+.masonry-column-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    will-change: transform;
+}
+
+.scroll-up .masonry-column-inner {
+    animation: scrollUp 45s linear infinite;
+}
+
+.scroll-down .masonry-column-inner {
+    animation: scrollDown 45s linear infinite;
+    transform: translateY(-50%);
+}
+
+.masonry-column:hover .masonry-column-inner {
+    animation-play-state: paused;
+}
+
+/* Diferentes velocidades para las columnas */
+.delay-1 { animation-duration: 50s !important; }
+.delay-2 { animation-duration: 40s !important; }
+
+/* Elementos de la Galería */
+.masonry-item {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    filter: brightness(0.85); /* Un poco más oscuro */
+}
+
+.masonry-item:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+    box-shadow: 0 10px 25px rgba(229, 159, 32, 0.4);
+    z-index: 10;
+}
+
+.masonry-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.back-link-gallery {
+    position: absolute !important;
+    bottom: 30px !important;
+    right: 40px !important;
+    left: auto !important;
+    z-index: 2000 !important;
+    text-decoration: none;
+    color: #fcd5a3;
+    font-family: 'caramella', sans-serif;
+    font-size: 12pt;
+    letter-spacing: 2px;
+    transition: color 0.3s;
+}
+
+.back-link-gallery:hover {
+    color: #e59f20;
+}
+
+/* Ajustes Responsive para Galería */
+@media (max-width: 1024px) {
+    .masonry-container { width: 180vw; transform: translate(-50%, -50%) rotate(-10deg); }
+    .masonry-column:nth-child(4) { display: none; }
+}
+
+@media (max-width: 768px) {
+    .masonry-container { width: 220vw; transform: translate(-50%, -50%) rotate(-5deg); }
+    .masonry-column:nth-child(3) { display: none; }
+    .gallery-header-title .radiant-title { font-size: 28pt; }
+    .gallery-header-title span { font-size: 20pt; }
+    .back-link-gallery { right: 20px !important; bottom: 20px !important; font-size: 10pt !important; }
+}
+
+/* =============================================
+   MODAL LIGHTBOX / SLIDESHOW
+   ============================================= */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(5, 16, 22, 0.96);
+    backdrop-filter: blur(15px);
+    z-index: 4000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.lightbox-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-controls {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    display: flex;
+    gap: 20px;
+    z-index: 4010;
+}
+
+.lightbox-btn {
+    background: transparent;
+    border: none;
+    color: #fcd5a3;
+    font-size: 26pt;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s;
+    line-height: 1;
+}
+
+.lightbox-btn:hover {
+    color: #e59f20;
+    transform: scale(1.1);
+}
+
+.lightbox-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 75%;
+    position: relative;
+    padding: 0 50px;
+}
+
+.lightbox-content img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    transition: opacity 0.3s ease;
+    border: 2px solid rgba(253, 213, 163, 0.1);
+}
+
+.lightbox-nav-btn {
+    background: rgba(253, 213, 163, 0.05);
+    color: #fcd5a3;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 24pt;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 4015;
+}
+
+.lightbox-nav-btn:hover {
+    background: rgba(229, 159, 32, 0.4);
+    transform: scale(1.1);
+}
+
+#lightbox-prev { left: 40px; }
+#lightbox-next { right: 40px; }
+
+.lightbox-indicators {
+    position: absolute;
+    bottom: 40px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 70%;
+}
+
+.lightbox-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(253, 213, 163, 0.2);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.lightbox-dot:hover {
+    background: rgba(253, 213, 163, 0.6);
+}
+
+.lightbox-dot.active {
+    background: #e59f20;
+    transform: scale(1.4);
+}
+
+/* Ajustes Responsive Lightbox */
+@media (max-width: 768px) {
+    #lightbox-prev { left: 10px; width: 45px; height: 45px; font-size: 18pt; }
+    #lightbox-next { right: 10px; width: 45px; height: 45px; font-size: 18pt; }
+    .lightbox-content { padding: 0 10px; height: 65%; }
+    .lightbox-indicators { bottom: 20px; }
+}
+
+.lightbox-credits, .map-attribution {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    font-family: 'caramella', sans-serif;
+    font-size: 9pt;
+    color: rgba(253, 213, 163, 0.4);
+    pointer-events: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.map-attribution {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    text-align: right;
+    padding-top: 5px;
+    width: 100%;
 }

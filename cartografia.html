@@ -88,6 +88,7 @@
             top: 0; left: 0;
             width: 100%; height: 100%;
             object-fit: cover;
+            object-position: center 55%;
             display: block;
             z-index: 1;
         }
@@ -97,10 +98,12 @@
             position: absolute;
             top: 0; left: 0;
             width: 100%; height: 100%;
-            object-fit: contain;
+            object-fit: cover;
+            object-position: center 55%; /* Sube la imagen */
             display: block;
             z-index: 2;
-            opacity: 0.6;
+            opacity: 1;
+            filter: brightness(1.1) contrast(1.1); /* Efecto opacidad/intensidad */
             transition: opacity 0.8s ease;
             pointer-events: none;
         }
@@ -309,7 +312,7 @@
                 <img src="imagenes/cartografia3.png" alt="Mapa cartográfico base de Palenque" class="carto-base">
 
                 <!-- Overlay map (parchment layer, toggleable) -->
-                <img src="imagenes/mapa-calco-completo.png" alt="Cartografía histórica de Palenque" class="carto-overlay" id="carto-overlay">
+                <img src="imagenes/mapapng.png" alt="Cartografía histórica de Palenque" class="carto-overlay" id="carto-overlay">
 
             </div>
 

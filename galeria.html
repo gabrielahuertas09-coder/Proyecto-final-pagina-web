@@ -53,166 +53,265 @@
         </div>
     </header>
 
-    <main class="radiant-wrapper">
-        <!-- SECCIÓN IZQUIERDA: La Rueda (HUD STYLE ANIMATED) -->
-        <section class="wheel-section">
-            <div class="radiant-hub">
-                <!-- SVG Técnico HUD Animado (Rediseño Estilo Referencia) -->
-                <svg viewBox="0 0 500 500" class="wheel-hud-svg">
-                    <!-- CAPA 1: Arcos Exteriores Fragmentados -->
-                    <g class="hud-rotate-slow">
-                        <path d="M 250 10 A 240 240 0 0 1 490 250" fill="none" class="hud-arc" stroke-width="0.5" stroke-dasharray="10, 20" />
-                        <path d="M 10 250 A 240 240 0 0 1 250 490" fill="none" class="hud-arc" stroke-width="1.5" />
-                        <circle cx="250" cy="250" r="245" class="hud-arc" stroke-width="0.5" stroke-opacity="0.2" />
-                    </g>
-                    
-                    <!-- CAPA 2: Escalas y Ticks Milimétricos -->
-                    <g class="hud-rotate-fast" transform="translate(250, 250)">
-                        <g>
-                            <!-- Ticks exteriores (360 grados) -->
-                            <path d="M 220 0 L 230 0" class="hud-tick" transform="rotate(0)" />
-                            <path d="M 220 0 L 230 0" class="hud-tick" transform="rotate(2)" />
-                            <path d="M 220 0 L 230 0" class="hud-tick" transform="rotate(4)" />
-                            <path d="M 220 0 L 230 0" class="hud-tick" transform="rotate(6)" />
-                            <path d="M 220 0 L 230 0" class="hud-tick" transform="rotate(8)" />
-                            <path d="M 220 0 L 230 0" class="hud-tick" transform="rotate(10)" />
-                            <circle cx="0" cy="0" r="225" fill="none" class="hud-arc" stroke-width="1" stroke-dasharray="2, 8" />
-                        </g>
-                        <!-- Punteros Triangulares -->
-                        <polygon points="230,-5 240,0 230,5" class="hud-accent" transform="rotate(45)" />
-                        <polygon points="230,-5 240,0 230,5" class="hud-accent" transform="rotate(225)" />
-                    </g>
+    <main class="gallery-masonry-wrapper">
+        <!-- Título Superior -->
+        <div class="gallery-header-title">
+            <h1 class="radiant-title">GALERÍA <span>de memorias</span></h1>
+        </div>
 
-                    <!-- CAPA 3: Arcos Gruesos y Datos Numéricos -->
-                    <g class="hud-pulse">
-                        <path d="M 460 250 A 210 210 0 0 1 250 460" fill="none" class="hud-arc hud-arc-thick" stroke-dasharray="80, 20" />
-                        <path d="M 40 250 A 210 210 0 0 1 250 40" fill="none" class="hud-arc" stroke-width="4" stroke-dasharray="10, 150" />
-                        
-                        <!-- Etiquetas Numéricas (Siguiendo la referencia) -->
-                        <g class="hud-data-group" transform="translate(250, 250)">
-                            <text x="215" y="-10" class="hud-data-text" transform="rotate(-70)">8.396</text>
-                            <text x="215" y="-10" class="hud-data-text" transform="rotate(-50)">8.368</text>
-                            <text x="215" y="-10" class="hud-data-text" transform="rotate(-30)">8.324</text>
-                            <text x="215" y="-10" class="hud-data-text" transform="rotate(-10)">8.288</text>
-                            <text x="215" y="-10" class="hud-data-text" transform="rotate(10)">8.252</text>
-                        </g>
-                    </g>
-
-                    <!-- NÚCLEO CENTRAL (HUD Core) -->
-                    <g transform="translate(250, 250)">
-                        <circle cx="0" cy="0" r="140" fill="none" class="hud-arc" stroke-width="0.5" stroke-dasharray="5, 5" />
-                        <path d="M 100 0 A 100 100 0 0 1 0 100" fill="none" class="hud-arc-thick" stroke="#EE9B00" />
-                        <circle cx="0" cy="0" r="45" fill="#001219" />
-                        <!-- Rectángulos de Escaneo -->
-                        <rect x="110" y="-2" width="20" height="4" class="hud-accent" transform="rotate(180)" />
-                        <rect x="110" y="-2" width="20" height="4" class="hud-accent" transform="rotate(200)" />
-                    </g>
-
-                    <text x="250" y="255" class="hud-core-text" text-anchor="middle">ACTIVE</text>
-                </svg>
+        <div class="masonry-container">
+            <!-- COLUMNA 1 (Hacia Arriba) -->
+            <div class="masonry-column scroll-up">
+                <div class="masonry-column-inner">
+                    <div class="masonry-item" data-index="0"><img src="rueda/1.jpg" alt="Memoria 1"></div>
+                    <div class="masonry-item" data-index="4"><img src="rueda/5.jpg" alt="Memoria 5"></div>
+                    <div class="masonry-item" data-index="8"><img src="rueda/9.jpg" alt="Memoria 9"></div>
+                    <div class="masonry-item" data-index="12"><img src="rueda/13.jpg" alt="Memoria 13"></div>
+                    <div class="masonry-item" data-index="16"><img src="rueda/17.jpg" alt="Memoria 17"></div>
+                    <div class="masonry-item" data-index="20"><img src="rueda/21.jpg" alt="Memoria 21"></div>
+                    <!-- Duplicado para loop infinito -->
+                    <div class="masonry-item" data-index="0"><img src="rueda/1.jpg" alt="Memoria 1"></div>
+                    <div class="masonry-item" data-index="4"><img src="rueda/5.jpg" alt="Memoria 5"></div>
+                    <div class="masonry-item" data-index="8"><img src="rueda/9.jpg" alt="Memoria 9"></div>
+                    <div class="masonry-item" data-index="12"><img src="rueda/13.jpg" alt="Memoria 13"></div>
+                    <div class="masonry-item" data-index="16"><img src="rueda/17.jpg" alt="Memoria 17"></div>
+                    <div class="masonry-item" data-index="20"><img src="rueda/21.jpg" alt="Memoria 21"></div>
+                </div>
             </div>
-            <!-- Contenedor de la Rueda (22 Imágenes de la carpeta rueda) -->
-            <div id="radiantWheel">
-                <div class="radiant-item animate-on-scroll"><img src="rueda/1.jpg" alt="Rueda 1"></div>
-                <div class="radiant-item animate-on-scroll"><img src="rueda/2.jpg" alt="Rueda 2"></div>
-                <div class="radiant-item animate-on-scroll"><img src="rueda/3.jpg" alt="Rueda 3"></div>
-                <div class="radiant-item animate-on-scroll"><img src="rueda/4.jpg" alt="Rueda 4"></div>
-                <div class="radiant-item animate-on-scroll"><img src="rueda/5.jpg" alt="Rueda 5"></div>
-                <div class="radiant-item animate-on-scroll"><img src="rueda/6.jpg" alt="Rueda 6"></div>
-                <div class="radiant-item animate-on-scroll"><img src="rueda/7.jpg" alt="Rueda 7"></div>
-                <div class="radiant-item animate-on-scroll"><img src="rueda/8.jpg" alt="Rueda 8"></div>
-                <div class="radiant-item animate-on-scroll"><img src="rueda/9.jpg" alt="Rueda 9"></div>
-                <div class="radiant-item animate-on-scroll"><img src="rueda/10.jpg" alt="Rueda 10"></div>
-                <div class="radiant-item animate-on-scroll"><img src="rueda/11.jpg" alt="Rueda 11"></div>
-                <div class="radiant-item animate-on-scroll"><img src="rueda/12.jpg" alt="Rueda 12"></div>
-                <div class="radiant-item animate-on-scroll"><img src="rueda/13.jpg" alt="Rueda 13"></div>
-                <div class="radiant-item animate-on-scroll"><img src="rueda/14.jpg" alt="Rueda 14"></div>
-                <div class="radiant-item animate-on-scroll"><img src="rueda/15.jpg" alt="Rueda 15"></div>
-                <div class="radiant-item animate-on-scroll"><img src="rueda/16.jpg" alt="Rueda 16"></div>
-                <div class="radiant-item animate-on-scroll"><img src="rueda/17.jpg" alt="Rueda 17"></div>
-                <div class="radiant-item animate-on-scroll"><img src="rueda/18.jpg" alt="Rueda 18"></div>
-                <div class="radiant-item animate-on-scroll"><img src="rueda/19.jpg" alt="Rueda 19"></div>
-                <div class="radiant-item animate-on-scroll"><img src="rueda/20.jpg" alt="Rueda 20"></div>
-                <div class="radiant-item animate-on-scroll"><img src="rueda/21.jpg" alt="Rueda 21"></div>
-                <div class="radiant-item animate-on-scroll"><img src="rueda/22.jpg" alt="Rueda 22"></div>
+            <!-- COLUMNA 2 (Hacia Abajo) -->
+            <div class="masonry-column scroll-down">
+                <div class="masonry-column-inner">
+                    <div class="masonry-item" data-index="1"><img src="rueda/2.jpg" alt="Memoria 2"></div>
+                    <div class="masonry-item" data-index="5"><img src="rueda/6.jpg" alt="Memoria 6"></div>
+                    <div class="masonry-item" data-index="9"><img src="rueda/10.jpg" alt="Memoria 10"></div>
+                    <div class="masonry-item" data-index="13"><img src="rueda/14.jpg" alt="Memoria 14"></div>
+                    <div class="masonry-item" data-index="17"><img src="rueda/18.jpg" alt="Memoria 18"></div>
+                    <div class="masonry-item" data-index="21"><img src="rueda/22.jpg" alt="Memoria 22"></div>
+                    <!-- Duplicado -->
+                    <div class="masonry-item" data-index="1"><img src="rueda/2.jpg" alt="Memoria 2"></div>
+                    <div class="masonry-item" data-index="5"><img src="rueda/6.jpg" alt="Memoria 6"></div>
+                    <div class="masonry-item" data-index="9"><img src="rueda/10.jpg" alt="Memoria 10"></div>
+                    <div class="masonry-item" data-index="13"><img src="rueda/14.jpg" alt="Memoria 14"></div>
+                    <div class="masonry-item" data-index="17"><img src="rueda/18.jpg" alt="Memoria 18"></div>
+                    <div class="masonry-item" data-index="21"><img src="rueda/22.jpg" alt="Memoria 22"></div>
+                </div>
             </div>
-        </section>
-
-        <!-- SECCIÓN DERECHA: Panel de Visualización Lateral -->
-        <section class="preview-section" id="photoPreview">
-            <!-- Título integrado -->
-            <div class="radiant-title-container">
-                <h1 class="radiant-title">GALERÍA <span>de memorias</span></h1>
+            <!-- COLUMNA 3 (Hacia Arriba) -->
+            <div class="masonry-column scroll-up">
+                <div class="masonry-column-inner delay-1">
+                    <div class="masonry-item" data-index="2"><img src="rueda/3.jpg" alt="Memoria 3"></div>
+                    <div class="masonry-item" data-index="6"><img src="rueda/7.jpg" alt="Memoria 7"></div>
+                    <div class="masonry-item" data-index="10"><img src="rueda/11.jpg" alt="Memoria 11"></div>
+                    <div class="masonry-item" data-index="14"><img src="rueda/15.jpg" alt="Memoria 15"></div>
+                    <div class="masonry-item" data-index="18"><img src="rueda/19.jpg" alt="Memoria 19"></div>
+                    <!-- Duplicado -->
+                    <div class="masonry-item" data-index="2"><img src="rueda/3.jpg" alt="Memoria 3"></div>
+                    <div class="masonry-item" data-index="6"><img src="rueda/7.jpg" alt="Memoria 7"></div>
+                    <div class="masonry-item" data-index="10"><img src="rueda/11.jpg" alt="Memoria 11"></div>
+                    <div class="masonry-item" data-index="14"><img src="rueda/15.jpg" alt="Memoria 15"></div>
+                    <div class="masonry-item" data-index="18"><img src="rueda/19.jpg" alt="Memoria 19"></div>
+                </div>
             </div>
+            <!-- COLUMNA 4 (Hacia Abajo) -->
+            <div class="masonry-column scroll-down">
+                <div class="masonry-column-inner delay-2">
+                    <div class="masonry-item" data-index="3"><img src="rueda/4.jpg" alt="Memoria 4"></div>
+                    <div class="masonry-item" data-index="7"><img src="rueda/8.jpg" alt="Memoria 8"></div>
+                    <div class="masonry-item" data-index="11"><img src="rueda/12.jpg" alt="Memoria 12"></div>
+                    <div class="masonry-item" data-index="15"><img src="rueda/16.jpg" alt="Memoria 16"></div>
+                    <div class="masonry-item" data-index="19"><img src="rueda/20.jpg" alt="Memoria 20"></div>
+                    <!-- Duplicado -->
+                    <div class="masonry-item" data-index="3"><img src="rueda/4.jpg" alt="Memoria 4"></div>
+                    <div class="masonry-item" data-index="7"><img src="rueda/8.jpg" alt="Memoria 8"></div>
+                    <div class="masonry-item" data-index="11"><img src="rueda/12.jpg" alt="Memoria 12"></div>
+                    <div class="masonry-item" data-index="15"><img src="rueda/16.jpg" alt="Memoria 16"></div>
+                    <div class="masonry-item" data-index="19"><img src="rueda/20.jpg" alt="Memoria 20"></div>
+                </div>
+            </div>
+        </div>
 
-            <!-- Placeholder inicial -->
-            <div class="preview-placeholder">Selecciona un fragmento de memoria</div>
-            <img id="photoPreviewImg" src="" alt="Mural Completo" class="premium-img-effect">
-            
-            <!-- Botón Volver al Inicio (Dentro del contenedor de imagen grande) -->
-            <a href="index.html" class="back-link">← VOLVER AL INICIO</a>
-        </section>
+        <!-- Botón Volver al Inicio en la galería -->
+        <a href="index.html" class="back-link back-link-gallery pull-up" style="position: absolute; bottom: 30px; z-index: 100;">← VOLVER AL INICIO</a>
     </main>
 
-    <!-- Script de Rotación e Interacción Lateral -->
+    <!-- MODAL SLIDESHOW / LIGHTBOX -->
+    <div id="gallery-lightbox" class="lightbox-overlay">
+        <div class="lightbox-controls">
+            <button id="lightbox-close" class="lightbox-btn" title="Cerrar (Esc)">&times;</button>
+            <button id="lightbox-play" class="lightbox-btn" title="Pausar/Reproducir">&#10074;&#10074;</button> <!-- Icono de pausa por defecto -->
+        </div>
+        
+        <div class="lightbox-content">
+            <button id="lightbox-prev" class="lightbox-nav-btn">&#10094;</button>
+            <img id="lightbox-img" src="" alt="Vista Previa Completa">
+            <button id="lightbox-next" class="lightbox-nav-btn">&#10095;</button>
+        </div>
+        
+        <div class="lightbox-indicators" id="lightbox-dots"></div>
+
+        <!-- Créditos de Audio -->
+        <div class="lightbox-credits">
+            Créditos: audio sacado de Spotify autor: emilson Pacheco - tradición bullerengue
+        </div>
+
+        <!-- Audio del Galería (Bucle) -->
+        <audio id="gallery-audio" src="music/melodia.mp4" loop preload="auto"></audio>
+    </div>
+
+    <!-- Script del Slideshow -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const wheel = document.getElementById('radiantWheel');
-            const previewImg = document.getElementById('photoPreviewImg');
-            const placeholder = document.querySelector('.preview-placeholder');
-            const radiantItems = document.querySelectorAll('.radiant-item');
+            const items = document.querySelectorAll('.masonry-item');
+            const lightbox = document.getElementById('gallery-lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const btnClose = document.getElementById('lightbox-close');
+            const btnPrev = document.getElementById('lightbox-prev');
+            const btnNext = document.getElementById('lightbox-next');
+            const btnPlay = document.getElementById('lightbox-play');
+            const dotsContainer = document.getElementById('lightbox-dots');
+            const galleryAudio = document.getElementById('gallery-audio');
 
-            let rotation = 0;
-            let targetRotation = 0;
-            let currentRotation = 0;
-            let targetX = 0; // Para el movimiento lateral solicitado
-            let currentX = 0;
-
-            // 1. Animación de Rotación y Movimiento Horizontal Dinámico
-            function animate() {
-                rotation += 0.04; // Rotación lenta constante
-                currentRotation += (rotation + targetRotation - currentRotation) * 0.1;
-                currentX += (targetX - currentX) * 0.05; // Suavizado del movimiento X
-
-                // Aplicamos tanto la rotación como el desplazamiento lateral
-                wheel.style.transform = `translate(${currentX}px, -50%) rotate(${currentRotation}deg)`;
-                requestAnimationFrame(animate);
-            }
-            animate();
-
-            // Interacción con el mouse para rotación y movimiento lateral
-            window.addEventListener('mousemove', (e) => {
-                const x = e.clientX / window.innerWidth;
-                targetRotation = (x - 0.5) * 12; // Rotación según el mouse
-                targetX = (x - 0.5) * 40;        // Desplazamiento Izquierda-Derecha (40px rango)
+            // Preparar el array de imágenes ordenado por data-index
+            let imagesArray = [];
+            items.forEach(item => {
+                const index = parseInt(item.getAttribute('data-index'));
+                if(!imagesArray[index]) {
+                    imagesArray[index] = item.querySelector('img').src;
+                }
             });
+            // Filtrar posibles vacíos
+            imagesArray = imagesArray.filter(src => src !== undefined);
 
-            // 2. Lógica de "Apertura" en el Panel Derecho (Visualizar imagen completa)
-            radiantItems.forEach(item => {
+            let currentIndex = 0;
+            let slideshowInterval;
+            let isPlaying = true;
+
+            // Crear dots
+            imagesArray.forEach((_, idx) => {
+                const dot = document.createElement('span');
+                dot.classList.add('lightbox-dot');
+                if(idx === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => {
+                    goToSlide(idx);
+                    resetInterval(); // Reiniciar el temporizador al cambiar manualmente
+                });
+                dotsContainer.appendChild(dot);
+            });
+            const dots = document.querySelectorAll('.lightbox-dot');
+
+            function updateSlide(index) {
+                // Fade out
+                lightboxImg.style.opacity = 0;
+                
+                setTimeout(() => {
+                    lightboxImg.src = imagesArray[index];
+                    
+                    // Actualizar dots
+                    dots.forEach(d => d.classList.remove('active'));
+                    if(dots[index]) dots[index].classList.add('active');
+                    
+                    // Fade in
+                    lightboxImg.style.opacity = 1;
+                }, 300); // 300ms de transición
+            }
+
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % imagesArray.length;
+                updateSlide(currentIndex);
+            }
+
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + imagesArray.length) % imagesArray.length;
+                updateSlide(currentIndex);
+            }
+
+            function goToSlide(index) {
+                currentIndex = index;
+                updateSlide(currentIndex);
+            }
+
+            function startSlideshow() {
+                if(!isPlaying) return;
+                slideshowInterval = setInterval(nextSlide, 3500); // Avanza cada 3.5 segundos
+                btnPlay.innerHTML = '&#10074;&#10074;'; // Icono Pausa
+            }
+
+            function stopSlideshow() {
+                clearInterval(slideshowInterval);
+                btnPlay.innerHTML = '&#9654;'; // Icono Play
+            }
+
+            function resetInterval() {
+                if(isPlaying) {
+                    stopSlideshow();
+                    startSlideshow();
+                }
+            }
+
+            function togglePlay() {
+                isPlaying = !isPlaying;
+                if(isPlaying) {
+                    startSlideshow();
+                } else {
+                    stopSlideshow();
+                }
+            }
+
+            // Abrir lightbox al hacer clic en imagen
+            items.forEach(item => {
                 item.addEventListener('click', () => {
-                    const img = item.querySelector('img');
+                    const idx = parseInt(item.getAttribute('data-index'));
+                    currentIndex = idx;
+                    updateSlide(currentIndex);
+                    lightbox.classList.add('active');
+                    document.body.style.overflow = 'hidden'; // Evitar scroll de fondo
+                    if(isPlaying) startSlideshow();
                     
-                    // Efecto de fundido al cambiar la imagen
-                    previewImg.classList.remove('active');
-                    
-                    // Detectar si la foto es vertical
-                    const isVertical = item.classList.contains('vertical-photo');
-                    
-                    setTimeout(() => {
-                        previewImg.src = img.src;
-                        
-                        // Aplicar clase vertical si corresponde
-                        if (isVertical) {
-                            previewImg.classList.add('is-vertical');
-                        } else {
-                            previewImg.classList.remove('is-vertical');
-                        }
-                        
-                        previewImg.classList.add('active');
-                        placeholder.style.display = 'none';
-                    }, 100);
+                    // Solo intentar reproducir audio tras la primera interacción del usuario
+                    galleryAudio.play().catch(e => console.log("Auto-play prevented until interaction."));
                 });
             });
+
+            // Cerrar lightbox
+            function closeLightbox() {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = 'auto'; // Restaurar scroll
+                stopSlideshow();
+                
+                // Detener y resetear audio
+                galleryAudio.pause();
+                galleryAudio.currentTime = 0;
+            }
+
+            btnClose.addEventListener('click', closeLightbox);
+            
+            // Navegación click
+            btnNext.addEventListener('click', () => {
+                nextSlide();
+                resetInterval();
+            });
+            btnPrev.addEventListener('click', () => {
+                prevSlide();
+                resetInterval();
+            });
+            btnPlay.addEventListener('click', togglePlay);
+
+            // Cerrar al hacer clic fuera de la imagen (en el fondo oscuro)
+            lightbox.addEventListener('click', (e) => {
+                if(e.target === lightbox || e.target.classList.contains('lightbox-content')) {
+                    closeLightbox();
+                }
+            });
+
+            // Soporte Teclado
+            document.addEventListener('keydown', (e) => {
+                if(!lightbox.classList.contains('active')) return;
+                if(e.key === 'Escape') closeLightbox();
+                if(e.key === 'ArrowRight') { nextSlide(); resetInterval(); }
+                if(e.key === 'ArrowLeft') { prevSlide(); resetInterval(); }
+                if(e.key === ' ') { e.preventDefault(); togglePlay(); }
+            });
+
         });
     </script>
 </body>
