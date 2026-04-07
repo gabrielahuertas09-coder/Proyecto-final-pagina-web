@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -18,26 +18,30 @@
         <nav>
             <ul>
                 <li><a href="index.html">INICIO</a></li>
-                <li><a href="explora.html">EXPLORAR</a></li>
-                <li><a href="cartografia.html">CARTOGRAFIA</a></li>
+                <li><a href="historia.html">HISTORIA</a></li>
+                <li><a href="gastronomia.html">GASTRONOMÍA</a></li>
+                <li><a href="musica.html">MÚSICA</a></li>
+                <li><a href="editorial.html">EDITORIAL</a></li>
+                <li><a href="galeria.html">GALERÍA</a></li>
                 <li><a href="actividades.html">ACTIVIDADES</a></li>
+                <li><a href="explora.html">EXPLORAR</a></li>
+                <li><a href="cartografia.html">CARTOGRAFÍA</a></li>
             </ul>
         </nav>
     </div>
 
     <header class="header-principal subpage-header">
         <div class="header-brand">
-            <a href="index.html" class="ecos-palenque">ECOS DE PALENQUE</a>
+            <a href="index.html" class="ecos-palenque" style="text-decoration: none;">ECOS DE PALENQUE</a>
         </div>
         <div class="header-right-side">
             <nav class="nav-desktop">
                 <ul>
-                    <li><a href="index.html">INICIO</a></li>
                     <li><a href="historia.html">HISTORIA</a></li>
                     <li><a href="gastronomia.html">GASTRONOMÍA</a></li>
                     <li><a href="musica.html">MÚSICA</a></li>
                     <li><a href="editorial.html">EDITORIAL</a></li>
-                    <li><a href="galeria.html">GALERIA</a></li>
+                    <li><a href="galeria.html">GALERÍA</a></li>
                 </ul>
             </nav>
             <!-- BOTÓN HAMBURGUESA INTEGRADO -->
@@ -53,43 +57,58 @@
         <!-- SECCIÓN IZQUIERDA: La Rueda (HUD STYLE ANIMATED) -->
         <section class="wheel-section">
             <div class="radiant-hub">
-                <!-- SVG Técnico HUD Animado -->
+                <!-- SVG Técnico HUD Animado (Rediseño Estilo Referencia) -->
                 <svg viewBox="0 0 500 500" class="wheel-hud-svg">
-                    <!-- Capa Rotación Lenta (CW) -->
+                    <!-- CAPA 1: Arcos Exteriores Fragmentados -->
                     <g class="hud-rotate-slow">
-                        <circle cx="250" cy="250" r="240" class="hud-arc" stroke-width="1" />
-                        <circle cx="250" cy="250" r="210" class="hud-arc" stroke-width="8" stroke-dasharray="100, 400" />
-                        <!-- Ticks -->
-                        <g transform="translate(250, 250)">
-                            <line x1="215" y1="0" x2="225" y2="0" class="hud-tick" transform="rotate(0)" />
-                            <line x1="215" y1="0" x2="225" y2="0" class="hud-tick" transform="rotate(45)" />
-                            <line x1="215" y1="0" x2="225" y2="0" class="hud-tick" transform="rotate(90)" />
-                            <line x1="215" y1="0" x2="225" y2="0" class="hud-tick" transform="rotate(135)" />
-                            <line x1="215" y1="0" x2="225" y2="0" class="hud-tick" transform="rotate(180)" />
-                            <line x1="215" y1="0" x2="225" y2="0" class="hud-tick" transform="rotate(225)" />
-                            <line x1="215" y1="0" x2="225" y2="0" class="hud-tick" transform="rotate(270)" />
-                            <line x1="215" y1="0" x2="225" y2="0" class="hud-tick" transform="rotate(315)" />
-                        </g>
+                        <path d="M 250 10 A 240 240 0 0 1 490 250" fill="none" class="hud-arc" stroke-width="0.5" stroke-dasharray="10, 20" />
+                        <path d="M 10 250 A 240 240 0 0 1 250 490" fill="none" class="hud-arc" stroke-width="1.5" />
+                        <circle cx="250" cy="250" r="245" class="hud-arc" stroke-width="0.5" stroke-opacity="0.2" />
                     </g>
                     
-                    <!-- Capa Rotación Rápida (CCW) -->
-                    <g class="hud-rotate-fast">
-                        <circle cx="250" cy="250" r="230" class="hud-arc hud-arc-dashed" stroke-width="1" />
-                        <circle cx="250" cy="250" r="190" class="hud-arc" stroke-width="2" stroke-dasharray="200, 100" />
+                    <!-- CAPA 2: Escalas y Ticks Milimétricos -->
+                    <g class="hud-rotate-fast" transform="translate(250, 250)">
+                        <g>
+                            <!-- Ticks exteriores (360 grados) -->
+                            <path d="M 220 0 L 230 0" class="hud-tick" transform="rotate(0)" />
+                            <path d="M 220 0 L 230 0" class="hud-tick" transform="rotate(2)" />
+                            <path d="M 220 0 L 230 0" class="hud-tick" transform="rotate(4)" />
+                            <path d="M 220 0 L 230 0" class="hud-tick" transform="rotate(6)" />
+                            <path d="M 220 0 L 230 0" class="hud-tick" transform="rotate(8)" />
+                            <path d="M 220 0 L 230 0" class="hud-tick" transform="rotate(10)" />
+                            <circle cx="0" cy="0" r="225" fill="none" class="hud-arc" stroke-width="1" stroke-dasharray="2, 8" />
+                        </g>
+                        <!-- Punteros Triangulares -->
+                        <polygon points="230,-5 240,0 230,5" class="hud-accent" transform="rotate(45)" />
+                        <polygon points="230,-5 240,0 230,5" class="hud-accent" transform="rotate(225)" />
                     </g>
 
-                    <!-- Capa Núcleo Central (Pulsating) -->
+                    <!-- CAPA 3: Arcos Gruesos y Datos Numéricos -->
                     <g class="hud-pulse">
-                        <circle cx="250" cy="250" r="130" class="hud-arc hud-arc-thick" />
-                        <circle cx="250" cy="250" r="110" class="hud-arc" stroke-width="2" stroke-dasharray="20, 20" />
-                        <!-- Círculo azul oscuro en el centro (NUEVO ORDEN: Azul -> Naranja -> Rojo) -->
-                        <circle cx="250" cy="250" r="45" fill="#001219" opacity="1" />
+                        <path d="M 460 250 A 210 210 0 0 1 250 460" fill="none" class="hud-arc hud-arc-thick" stroke-dasharray="80, 20" />
+                        <path d="M 40 250 A 210 210 0 0 1 250 40" fill="none" class="hud-arc" stroke-width="4" stroke-dasharray="10, 150" />
+                        
+                        <!-- Etiquetas Numéricas (Siguiendo la referencia) -->
+                        <g class="hud-data-group" transform="translate(250, 250)">
+                            <text x="215" y="-10" class="hud-data-text" transform="rotate(-70)">8.396</text>
+                            <text x="215" y="-10" class="hud-data-text" transform="rotate(-50)">8.368</text>
+                            <text x="215" y="-10" class="hud-data-text" transform="rotate(-30)">8.324</text>
+                            <text x="215" y="-10" class="hud-data-text" transform="rotate(-10)">8.288</text>
+                            <text x="215" y="-10" class="hud-data-text" transform="rotate(10)">8.252</text>
+                        </g>
                     </g>
 
-                    <!-- Datos Numéricos Estáticos -->
-                    <text x="250" y="40" class="hud-data-text" text-anchor="middle">SYSTEM.READY</text>
-                    <text x="460" y="250" class="hud-data-text">8.324</text>
-                    <text x="40" y="250" class="hud-data-text" text-anchor="end">8.252</text>
+                    <!-- NÚCLEO CENTRAL (HUD Core) -->
+                    <g transform="translate(250, 250)">
+                        <circle cx="0" cy="0" r="140" fill="none" class="hud-arc" stroke-width="0.5" stroke-dasharray="5, 5" />
+                        <path d="M 100 0 A 100 100 0 0 1 0 100" fill="none" class="hud-arc-thick" stroke="#EE9B00" />
+                        <circle cx="0" cy="0" r="45" fill="#001219" />
+                        <!-- Rectángulos de Escaneo -->
+                        <rect x="110" y="-2" width="20" height="4" class="hud-accent" transform="rotate(180)" />
+                        <rect x="110" y="-2" width="20" height="4" class="hud-accent" transform="rotate(200)" />
+                    </g>
+
+                    <text x="250" y="255" class="hud-core-text" text-anchor="middle">ACTIVE</text>
                 </svg>
             </div>
             <!-- Contenedor de la Rueda (22 Imágenes de la carpeta rueda) -->
